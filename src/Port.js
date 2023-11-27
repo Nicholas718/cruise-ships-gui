@@ -1,6 +1,15 @@
 class Port {
-  constructor(port) {
-    this.startingPort = port;
+  constructor(name) {
+    this.name = name;
+    this.ships = [];
+  }
+  addShip(ships) {
+    this.ships.push(ships);
+  }
+
+  removeShip(ship) {
+    const index = this.ships.indexOf(ship);
+    this.ships.splice(index, 1);
   }
 }
 
